@@ -3,13 +3,16 @@ import handlebars from "express-handlebars";
 import { Server } from "socket.io"
 import { indexRouter } from "./routes/index.router.js"
 import path from "path";
-import { __dirname } from "../utils.js";
+import { __dirname } from "./utils.js";
 import { realTimeRouter } from "./routes/realTimeProducts.views.js";
 import { homeRouter } from "./routes/home.views.js";
 import { ProductManager } from "./controllers/productManager.js";
+
 const productManager = new ProductManager("src/db/products.json")
 const app = express()
+
 const PORT = process.env.PORT || 8080
+
 const httpServer = app.listen(PORT, () => {
     console.log(`📢 Server listening on port: ${PORT}`);
 })
@@ -21,7 +24,7 @@ app.use(express.urlencoded({ extended: true }))
 
 
 app.engine("handlebars", handlebars.engine());
-app.set("views", path.join(__dirname, "src/views"));
+app.set("views", path.join(__dirname, "/views"));
 app.set("view engine", "handlebars");
 
 app.use(express.static(__dirname + "/public"));

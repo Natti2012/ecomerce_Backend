@@ -130,5 +130,16 @@
     "price": "10000",
     "stock": "432345",
     "category": "electro"
+  },
+  {
+    "id": "a3aa7137-cfff-46cb-8bc6-aeb5e3fb7e4d",
+    "status": true,
+    "thumbnails": "https://images.tcdn.com.br/img/img_prod/775752/calca_hocks_jeans_tempo_regular_4085_1_f5a6c547273539429080f5272f75290a.jpg",
+    "title": "prod19",
+    "description": "este es un producto de preuba",
+    "code": "12345345",
+    "price": "10000",
+    "stock": "12",
+    "category": "electro"
   }
 ]
